@@ -1,0 +1,188 @@
+body, html {
+    background-color: #222;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 100px;
+  }
+  
+  .content-wrapper {
+    min-height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 70px; /* Adjust the padding to match the height of the player bar */
+  }
+  
+  .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("https://simplyk-bucket-production.s3.ca-central-1.amazonaws.com/organizations/7/5/8/b/758b577e-0ef7-4986-af77-ac3f8378db73/2b86e6ea-b4c1-4da0-8b20-c840e910dac0.jpeg");
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: height 0.5s ease;
+  }
+  
+  .banner-text {
+    text-align: left;
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: white;
+    font-family:'Trebuchet MS';
+    text-shadow: 2px 10px 10px black;
+  }
+  
+  .songs {
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 2px;
+  }
+  
+  
+  .song {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: height 0.5s ease;
+  }
+  
+  
+  .song img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  .song-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .song-info {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .songs p {
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  
+  
+  .player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .control-btn {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  
+  .backward {
+    background-image: url('https://www.iconsdb.com/icons/preview/white/media-skip-backward-xxl.png'); /* Add your backward button image */
+  }
+  
+  .forward {
+    background-image: url('https://www.iconsdb.com/icons/preview/white/media-skip-forward-xxl.png'); /* Add your forward button image */
+  }
+  
+  .progress-bar {
+    flex-grow: 1;
+    height: 10px; 
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    transition: width 0.1s ease;
+  }
+  
+  /* Add margin to the time indicators to create space between the progress bar and volume slider */
+  .time-indicators {
+    margin-left: 10px;
+    color: #888;
+    margin-right: 15px; /* Add margin to create space */
+  }
+  
+  /* Adjust the volume slider position */
+  .volume-slider {
+    margin-right: 10px; /* Add margin to move it away from the border */
+  }
+  .play-pause-img img {
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+  }
+  
+  
+  .song.playing {
+    border: 2px solid #0073ff; 
+    color: #0073ff; 
+  }
+  
+  
+  .song.playing .song-title{
+    border: 1px solid #0073ff; /* Change the border color for the song name and info */
+    color: #0073ff; /* Change the text color for the song name and info */
+  }
+  
+  .song.playing .song-info{
+    border: 1px solid #0073ff; /* Change the border color for the song name and info */
+    color: #0073ff; /* Change the text color for the song name and info */
+  }
+  
+  .song:hover .song-title,
+  .song:hover .song-info {
+    color: #0073ff; /* Change the text color on hover */
+  }
+  
+  .songs:last-child {
+    margin-bottom: 80px; /* Adjust the margin to accommodate the player bar */
+  }
+  
+  .top-right-link {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 0px 1px 10px #2b43c3
+  }
+  
